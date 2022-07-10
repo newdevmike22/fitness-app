@@ -1,0 +1,14 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+body {
+    background: $clr-light-grey;
+    margin: 0;
+    font-family: "Poppins";
+}
+
+.pages{
+    max-width: 1400px;
+    padding: 20px;
+    margin: 0 auto;
+}
