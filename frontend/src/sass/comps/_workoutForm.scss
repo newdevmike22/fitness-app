@@ -1,0 +1,30 @@
+
+label, input {
+    display: block;
+  }
+  input {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid $clr-light-grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  form button {
+    background: $clr-primary;
+    border: 0;
+    color: $clr-white;
+    padding: 10px;
+    font-family: "Poppins";
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  div.error {
+    padding: 10px;
+    background: $clr-white;
+    border: 1px solid $clr-error;
+    color: $clr-error;
+    border-radius: 4px;
+    margin: 20px 0;
+  }
