@@ -30,8 +30,13 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
-    background: $clr-white;
+    background: $clr-error;
     padding: 6px;
     border-radius: 50%;
-    color: $clr-black;
+    color: $clr-white;
+  }
+
+  .workout-details span:hover {
+    background: $clr-grey-one;
+    color: $clr-white;
   }
