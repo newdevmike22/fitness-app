@@ -10,6 +10,8 @@ const WorkoutForm = () => {
     const [sets, setSets] = useState("");
     const [error, setError] = useState(null);
 
+    const [emptyFields, setEmptyFields] = useState([])
+
     const handleSubmit = async (e) => {
         e.preventDefault()
 
@@ -26,6 +28,7 @@ const WorkoutForm = () => {
 
         if (!response.ok) {
             setError(json.error)
+            setEmptyFields(json.emptyFields)
         }
         if (response.ok) {
             setTitle("")
@@ -33,6 +36,7 @@ const WorkoutForm = () => {
             setReps("")
             setSets("")
             setError(null)
+            setEmptyFields([])
             console.log("New Workout Added!", json)
             dispatch({type: "CREATE_WORKOUT", payload: json})
         }
@@ -48,6 +52,7 @@ const WorkoutForm = () => {
                     type="text"
                     onChange={(e) => setTitle(e.target.value)}
                     value={title}
+                    className={emptyFields.includes("title") ? "error" : ""}
                 />
 
                 <label>Load (in lb)</label>
@@ -55,6 +60,7 @@ const WorkoutForm = () => {
                     type="number"
                     onChange={(e) => setLoad(e.target.value)}
                     value={load}
+                    className={emptyFields.includes("load") ? "error" : ""}
                 /> 
 
                 <label>Reps</label>
@@ -62,6 +68,7 @@ const WorkoutForm = () => {
                     type="numbert"
                     onChange={(e) => setReps(e.target.value)}
                     value={reps}
+                    className={emptyFields.includes("reps") ? "error" : ""}
                 /> 
 
                 <label>Sets</label>
@@ -69,6 +76,7 @@ const WorkoutForm = () => {
                     type="number"
                     onChange={(e) => setSets(e.target.value)}
                     value={sets}
+                    className={emptyFields.includes("sets") ? "error" : ""}
                 />
 
                 <button>Add Workout</button>

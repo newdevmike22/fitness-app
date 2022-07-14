@@ -70,6 +70,10 @@ div.error {
   margin: 20px 0;
 }
 
+input.error {
+  border: 1px solid #e7195a;
+}
+
 .home {
   display: -ms-grid;
   display: grid;
