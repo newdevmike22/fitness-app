@@ -61,6 +61,11 @@ nav button {
   font-size: 1em;
 }
 
+.userEmail {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
 label, input {
   display: block;
 }
